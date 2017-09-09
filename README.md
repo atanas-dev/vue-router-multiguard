@@ -14,8 +14,7 @@ Provides the ability to specify multiple guards for vue routes.
 
 ## Usage
 
-`multiguard(function[] guards)`
---> `function(to, from, next)`
+`multiguard(function[] guards)` -> `function(to, from, next) {... }`
 
 ```js
 var VueRouter = require('vue-router');
