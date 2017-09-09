@@ -21,24 +21,24 @@ import VueRouter from 'vue-router';
 import multiguard from 'vue-router-multiguard';
 
 const guard1 = function(to, from, next) {
-	console.log('guard1 called');
-	next();
+    console.log('guard1 called');
+    next();
 }
 
 const guard2 = function(to, from, next) {
-	console.log('guard2 called');
-	next();
+    console.log('guard2 called');
+    next();
 }
 
 const router = new VueRouter({
-	routes: [
-		{
-			name: 'home',
-			path: '/',
-			component: {},
-			beforeEnter: multiguard([guard1, guard2]),
-		}
-	]
+    routes: [
+        {
+            name: 'home',
+            path: '/',
+            component: {},
+            beforeEnter: multiguard([guard1, guard2]),
+        }
+    ]
 });
 ```
 
