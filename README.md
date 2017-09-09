@@ -6,7 +6,16 @@ Provides the ability to specify multiple guards for vue routes.
 
 `npm install vue-router-multiguard`
 
+## Notes
+
+- Guards are executed serially in the order they are supplied.
+- Guard execution will stop when all passed guards are executed OR when any guard calls `next()` with an argument other than `undefined`.
+- When a guard calls `next()` with an argument other than `undefined`, that argument will be passed to VueRouter.
+
 ## Usage
+
+`multiguard(function[] guards)`
+--> `function(to, from, next)`
 
 ```js
 var VueRouter = require('vue-router');
