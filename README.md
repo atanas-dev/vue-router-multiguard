@@ -17,25 +17,25 @@ Provides the ability to specify multiple guards for vue routes.
 `multiguard(function[] guards)` -> `function(to, from, next) {... }`
 
 ```js
-var VueRouter = require('vue-router');
-var multiguard = require('vue-router-multiguard');
+import VueRouter from 'vue-router';
+import multiguard from 'vue-router-multiguard';
 
-var guard1 = function(to, from, next) {
+const guard1 = function(to, from, next) {
 	console.log('guard1 called');
 	next();
 }
 
-var guard2 = function(to, from, next) {
+const guard2 = function(to, from, next) {
 	console.log('guard2 called');
 	next();
 }
 
-var router = new VueRouter({
+const router = new VueRouter({
 	routes: [
 		{
 			name: 'home',
 			path: '/',
-			component: ...,
+			component: {},
 			beforeEnter: multiguard([guard1, guard2]),
 		}
 	]
