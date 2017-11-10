@@ -6,7 +6,7 @@
     "type": "git",
     "url": "https://github.com/atanas-angelov-dev/vue-router-multiguard.git"
   },
-  "main": "index.js",
+  "main": "dist/vue-router-multiguard.min.js",
   "scripts": {
     "test": "mocha",
     "build": "webpack"
