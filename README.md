@@ -1,6 +1,6 @@
 # Vue Router Multiguard [![Build Status](https://travis-ci.org/atanas-angelov-dev/vue-router-multiguard.svg?branch=master)](https://travis-ci.org/atanas-angelov-dev/vue-router-multiguard)
 
-Provides the ability to specify multiple guards for vue routes.
+Provides the ability to specify multiple guards for vue router routes.
 
 ## Installing
 

@@ -25,7 +25,7 @@ module.exports = function(guards) {
     if (!Array.isArray(guards)) {
         throw new Error('You must specify an array of guards');
     }
-    
+
     return (to, from, next) => {
         return evaluateGuards(guards, to, from, next);
     };
