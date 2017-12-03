@@ -1,6 +1,6 @@
 {
   "name": "vue-router-multiguard",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Provides the ability to specify multiple guards for vue routes",
   "repository": {
     "type": "git",
