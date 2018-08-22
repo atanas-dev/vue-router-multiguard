@@ -8,7 +8,7 @@ Provides the ability to specify multiple guards for vue router routes.
 
 ## Notes
 
-- Guards are executed serially in the order they are supplied.
+- Guards are executed serially in the order they are supplied, respecting asynchronous ones.
 - Guard execution will stop when all passed guards are executed OR when any guard calls `next()` with an argument other than `undefined`.
 - When a guard calls `next()` with an argument other than `undefined`, that argument will be passed to VueRouter.
 
@@ -21,13 +21,17 @@ import VueRouter from 'vue-router';
 import multiguard from 'vue-router-multiguard';
 
 const guard1 = function(to, from, next) {
-    console.log('guard1 called');
-    next();
+    setTimeout(function() {
+        console.log('guard1 called');
+        next();
+    }, 1000);
 }
 
 const guard2 = function(to, from, next) {
-    console.log('guard2 called');
-    next();
+    setTimeout(function() {
+        console.log('guard2 called');
+        next();
+    }, 1000);
 }
 
 const router = new VueRouter({
